@@ -1,4 +1,5 @@
 import { concatInvert, concatOnly} from './manejo-strings.js'
+import { } from './matematica.js'
 
 let textoEntrada01 = "Escuela";
 let textoEntrada02 = "ORT";
