@@ -1,13 +1,12 @@
-const fs = require('fs')
+import { concatInvert, concatOnly} from './manejo-strings.js'
 
-fs.writeFile('./prueba1.txt', 'Lineal\nLinea 2\n', error=> {
+let textoEntrada01 = "Escuela";
+let textoEntrada02 = "ORT";
+let textoSalida;
 
-    if (error) {
-        console.log("Error", error)
-    } 
-    else {
-        console.log("archivo creado")    
-    }
-})
 
-console.log("Ulitma? Linea")
+
+textoSalida = concatInvert(textoEntrada01, textoEntrada02);
+console.clear();
+console.log(`Textos de Entrada: "${textoEntrada01}" y "${textoEntrada02}"`);
+console.log(`Texto de Salida: "${textoSalida}"`);
