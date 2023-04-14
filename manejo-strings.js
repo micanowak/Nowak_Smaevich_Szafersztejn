@@ -14,3 +14,5 @@ export function concatInvert(t1, t2) {
 export function concatOnly(t1, t2) {
     return t1 + t2;
 }
+
+export const PI = 3.14;
