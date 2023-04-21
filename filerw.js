@@ -5,7 +5,7 @@ export function copiar(archivoEntrada, archivoSalida) {
         if (err) throw err;           
         fs.writeFile(archivoSalida, data, (err) => {
             if (err) throw err;
-            console.log(${archivoEntrada})
+            console.log(archivoEntrada)
         })
     })
 }

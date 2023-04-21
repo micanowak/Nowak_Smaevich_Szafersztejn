@@ -1,4 +1,6 @@
-export let Alumno = [
-    username,
-    dni
-];
+export class Alumno {
+    constructor(username, dni) {
+        this.username = username;
+        this.dni = dni;
+    }
+};
