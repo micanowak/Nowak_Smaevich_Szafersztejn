@@ -2,6 +2,8 @@ import { concatInvert, concatOnly} from './manejo-strings.js'
 import { multiplicar, dividir, PI, sumar, restar} from './matematica.js'
 import { Alumno} from './Alumno.js'
 import {copiar} from './filerw.js'
+import config from './dbConfig.js';
+import sql from 'mssql';
 
 let textoEntrada01 = "Escuela";
 let textoEntrada02 = "ORT";
@@ -30,3 +32,7 @@ console.log(`Alumno 3: ${alumno3.username} y su dni es ${alumno3.dni}`);
 
 copiar("./entrada.txt", "./salida.txt");
 
+let pool = await sql.connect(config);
+let result = await pool.request().query("SELECT * from pizza");
+
+console.log(result.recordsets[0]);
