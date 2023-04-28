@@ -32,7 +32,4 @@ console.log(`Alumno 3: ${alumno3.username} y su dni es ${alumno3.dni}`);
 
 copiar("./entrada.txt", "./salida.txt");
 
-let pool = await sql.connect(config);
-let result = await pool.request().query("SELECT * from pizza");
-
 console.log(result.recordsets[0]);
